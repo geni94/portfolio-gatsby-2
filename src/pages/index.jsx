@@ -43,19 +43,19 @@ const Avatar = styled.img`
 `
 
 const AboutSub = styled.span`
-  ${tw`text-white pt-12 lg:pt-0 lg:pl-12 text-2xl lg:text-3xl xl:text-4xl`};
+  ${tw`text-white font-mono pt-12 lg:pt-0 lg:pl-12 text-2xl lg:text-3xl xl:text-4xl`};
 `
 
 const AboutDesc = styled.p`
-  ${tw`text-grey-light text-lg md:text-xl lg:text-2xl font-sans pt-6 md:pt-12 text-justify`};
+  ${tw`text-grey-light text-lg md:text-xl lg:text-2xl font-mono pt-6 md:pt-12 text-justify`};
 `
 
 const ContactText = styled.p`
-  ${tw`text-grey-light font-sans text-xl md:text-2xl lg:text-3xl`};
+  ${tw`text-grey-light font-mono text-xl md:text-2xl lg:text-3xl`};
 `
 
 const Footer = styled.footer`
-  ${tw`text-center text-grey absolute pin-b p-6 font-sans text-md lg:text-lg`};
+  ${tw`text-center text-grey absolute pin-b p-6 font-mono text-md lg:text-lg`};
 `
 
 const simpleCursor = {
@@ -77,7 +77,7 @@ const Index = () => (
       <Hero offset={0}>
         <BigTitle>
           <Typist stdTypingDelay={15} className="typist-class" avgTypingDelay={25} cursor={simpleCursor}>
-            Hello World <br /> I'm Eugen Yzeiri,
+            Hello World <br /> I'm Eugen,
           </Typist>
         </BigTitle>
         <Subtitle>
@@ -98,12 +98,12 @@ const Index = () => (
           <ProjectCard
             title="Ritech Solutions"
             link="https://www.ritech.co"
-            bg="linear-gradient(to right, #D4145A 0%, #FBB03B 100%)"
+            bg="linear-gradient(to right, #f2d024 0%, #70818a 100%)"
           >
             This project is my entry to Adobe's #ChallengeYourPerspective contest.
           </ProjectCard>
           <ProjectCard
-            title="Mixb.ly / Bump.fm"
+            title="Mixab.ly / Bump.fm"
             link="https://www.bump.fm"
             bg="linear-gradient(to right, #662D8C 0%, #ED1E79 100%)"
           >
@@ -112,21 +112,21 @@ const Index = () => (
           <ProjectCard
             title="GHO"
             link="https://globalhealthobjectives.org"
-            bg="linear-gradient(to right, #009245 0%, #FCEE21 100%)"
+            bg="linear-gradient(to right, #103d60 0%, #b2b7ff 100%)"
           >
             Recreation of a Tomb Raider Wallpaper (Fan Art)
           </ProjectCard>
           <ProjectCard
             title="Boardaboat"
             link="https://boardaboat.com"
-            bg="linear-gradient(to right, #D585FF 0%, #00FFEE 100%)"
+            bg="linear-gradient(to right, #103d60 0%, #00FFEE 100%)"
           >
             A fantasy image manipulation relocating the habitat of wild animals.
           </ProjectCard>
           <ProjectCard
             title="Advisor4Schools"
             link="http://advisor.4schools.com"
-            bg="linear-gradient(to right, #D585FF 0%, #00FFEE 100%)"
+            bg="linear-gradient(to right, #9babb4 0%, #364349 100%)"
           >
             Lorem Ipsum lorem ipsum is the standard.
           </ProjectCard>
@@ -140,23 +140,16 @@ const Index = () => (
           <ProjectCard
             title="Oda"
             link="`https://odahotel.al`"
-            bg="linear-gradient(to right, #D585FF 0%, #00FFEE 100%)"
+            bg="linear-gradient(to right, #684f1d 0%, #1f9d55 100%)"
           >
             Lorem Ipsum lorem ipsum is the standard.
           </ProjectCard>
           <ProjectCard
             title="My Portfolio"
             link="https://geni94.github.com"
-            bg="linear-gradient(to right, #D585FF 0%, #00FFEE 100%)"
+            bg="linear-gradient(to right, #72173a 0%, #e9af32 100%)"
           >
             This portfolio website.
-          </ProjectCard>
-          <ProjectCard
-            title="MIBS site"
-            link="http://advisor.4schools.com"
-            bg="linear-gradient(to right, #D585FF 0%, #00FFEE 100%)"
-          >
-            Lorem Ipsum lorem ipsum is the standard.
           </ProjectCard>
         </ProjectsWrapper>
       </Projects>
@@ -181,9 +174,8 @@ const Index = () => (
         <Inner>
           <Title>Get in touch</Title>
           <ContactText>
-            Say <a href="mailto:eugen.yzeiri@gmail.com">Hi</a> or find me on other platforms:{' '}
-            <a href="https://github.com/geni94">GitHub</a> &amp;{' '}
-            <a href="https://www.instagram.com/eugen_y_/">Instagram</a>
+            <a href="mailto:eugen.yzeiri@gmail.com">Say hi</a> or find me <a href="https://github.com/geni94">GitHub</a>{' '}
+            &amp; <a href="https://www.linkedin.com/in/eugen-yzeiri-8aa10288/">LinkedIn</a>
           </ContactText>
         </Inner>
         <Footer>
