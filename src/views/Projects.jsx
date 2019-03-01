@@ -28,16 +28,12 @@ const Projects = ({ children, offset }) => (
       <UpDownWide>
         <SVG icon="arrowUp" hiddenMobile width={16} fill={colors.green} left="20%" top="90%" />
         <SVG icon="triangle" width={12} stroke={colors.white} left="90%" top="30%" />
-        <SVG icon="circle" width={16} fill={colors.yellow} left="70%" top="90%" />
         <SVG icon="triangle" hiddenMobile width={16} stroke={colors.teal} left="18%" top="75%" />
         <SVG icon="circle" width={6} fill={colors.white} left="75%" top="10%" />
         <SVG icon="upDown" hiddenMobile width={8} fill={colors.green} left="45%" top="10%" />
       </UpDownWide>
       <SVG icon="circle" width={6} fill={colors.white} left="4%" top="20%" />
-      <SVG icon="circle" width={12} fill={colors.pink} left="80%" top="60%" />
       <SVG icon="box" width={6} fill={colors.orange} left="10%" top="10%" />
-      <SVG icon="box" width={12} fill={colors.yellow} left="29%" top="26%" />
-      <SVG icon="hexa" width={16} stroke={colors.red} left="75%" top="30%" />
       <SVG icon="hexa" width={8} stroke={colors.yellow} left="80%" top="70%" />
     </Divider>
   </>

@@ -19,6 +19,7 @@ import About from '../views/About'
 import Contact from '../views/Contact'
 
 import avatar from '../images/avatar.jpg'
+import '../../static/main.scss'
 
 const ProjectsWrapper = styled.div`
   ${tw`flex flex-wrap justify-between mt-8`};
@@ -97,56 +98,64 @@ const Index = () => (
         <ProjectsWrapper>
           <ProjectCard
             title="Ritech Solutions"
-            link="https://www.ritech.co"
+            referenceLink="https://www.ritech.co"
+            link="/projectAbout"
             bg="linear-gradient(to right, #f2d024 0%, #70818a 100%)"
           >
             This project is my entry to Adobe's #ChallengeYourPerspective contest.
           </ProjectCard>
           <ProjectCard
             title="Mixab.ly / Bump.fm"
-            link="https://www.bump.fm"
+            link="/projectAbout"
+            referenceLink="https://www.bump.fm"
             bg="linear-gradient(to right, #662D8C 0%, #ED1E79 100%)"
           >
             I entered the DOCMA 2017 award with this Harry Potter inspired image.
           </ProjectCard>
           <ProjectCard
             title="GHO"
-            link="https://globalhealthobjectives.org"
+            link="/projectAbout"
+            referenceLink="https://globalhealthobjectives.org"
             bg="linear-gradient(to right, #103d60 0%, #b2b7ff 100%)"
           >
             Recreation of a Tomb Raider Wallpaper (Fan Art)
           </ProjectCard>
           <ProjectCard
             title="Boardaboat"
-            link="https://boardaboat.com"
+            link="/projectAbout"
+            referenceLink="https://boardaboat.com"
             bg="linear-gradient(to right, #103d60 0%, #00FFEE 100%)"
           >
             A fantasy image manipulation relocating the habitat of wild animals.
           </ProjectCard>
           <ProjectCard
             title="Advisor4Schools"
-            link="http://advisor.4schools.com"
+            link="/projectAbout"
+            referenceLink="http://advisor.4schools.com"
             bg="linear-gradient(to right, #9babb4 0%, #364349 100%)"
           >
             Lorem Ipsum lorem ipsum is the standard.
           </ProjectCard>
           <ProjectCard
             title="MIBS site"
-            link="http://mcgill.com"
+            link="/projectAbout"
+            referenceLink="http://mcgill.com"
             bg="linear-gradient(to right, #D585FF 0%, #00FFEE 100%)"
           >
             Lorem Ipsum lorem ipsum is the standard.
           </ProjectCard>
           <ProjectCard
             title="Oda"
-            link="`https://odahotel.al`"
+            link="/projectAbout"
+            referenceLink="`https://odahotel.al`"
             bg="linear-gradient(to right, #684f1d 0%, #1f9d55 100%)"
           >
             Lorem Ipsum lorem ipsum is the standard.
           </ProjectCard>
           <ProjectCard
             title="My Portfolio"
-            link="https://geni94.github.com"
+            link="/projectAbout"
+            referenceLink="https://geni94.github.com"
             bg="linear-gradient(to right, #72173a 0%, #e9af32 100%)"
           >
             This portfolio website.
@@ -158,16 +167,18 @@ const Index = () => (
         <AboutHero>
           <Avatar src={avatar} alt="John Doe" />
           <AboutSub>
-            The English language can not fully capture the depth and complexity of my thoughts. So I'm incorporating
-            Emoji into my speech to better express myself. Winky face.
+            • 24 years old <br /> • web and software developer <br /> • based in Tirana, Albania
           </AboutSub>
         </AboutHero>
         <AboutDesc>
-          You know the way you feel when you see a picture of two otters holding hands? That's how you're gonna feel
-          every day. My mother cried the day I was born because she knew she’d never be prettier than me. You should
-          make me your campaign manager. I was born for politics. I have great hair and I love lying. Captain? The kids
-          want to know where Paulie the Pigeon is. I told them he got sucked up into an airplane engine, is that all
-          right?
+          I enjoy mixing creativity and simplicity. My work tends to be detail-oriented, test-friendly and have a
+          problem-solving attitude. Having lived in both developed and developing countries in the continent, I believe
+          I understand very well the European market. With a diversified portfolio, I've had professional experiences on
+          frontend/full-stack/software development, and have been keen on trying new data-driven technologies. <br />{' '}
+          Studied Computer & Information Sciences at University of Geneva. Having worked continuously with various
+          Scrum/Agile teams, my skills have been proven in different, flexible working environments. I tend to follow
+          object-oriented principles and like test-driven, mobile-first environments. <br /> Able to think in higher
+          levels of code and assist in software engineering. Fluent in English and French (and some Italian).
         </AboutDesc>
       </About>
       <Contact offset={4}>
