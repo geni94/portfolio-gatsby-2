@@ -10,6 +10,8 @@ import Layout from '../components/Layout'
 import { Title } from '../elements/Titles'
 import ProjectCard from '../components/ProjectCard'
 import Projects from '../views/Projects'
+import Inner from '../elements/Inner'
+import Contact from '../views/Contact'
 
 const ProjectsWrapper = styled.div`
   ${tw`flex flex-wrap justify-between mt-8`};
@@ -25,10 +27,18 @@ const ProjectsWrapper = styled.div`
   }
 `
 
+const ContactText = styled.p`
+  ${tw`text-grey-light font-mono text-xl md:text-2xl lg:text-3xl`};
+`
+
+const Footer = styled.footer`
+  ${tw`text-center text-grey absolute pin-b p-6 font-mono text-md lg:text-lg`};
+`
+
 const ProjectAbout = () => (
   <>
     <Layout />
-    <Parallax pages={2}>
+    <Parallax pages={3}>
       <Projects offset={0}>
         <div className="link-menu about">
           <Link to="/">Home</Link>
@@ -42,15 +52,15 @@ const ProjectAbout = () => (
             link="/projectAbout"
             bg="linear-gradient(to right, #f2d024 0%, #70818a 100%)"
           >
-            This project is my entry to Adobe's #ChallengeYourPerspective contest.
+            [Currently] working as web developer. Dealing with AWS, Vue, Jenkins, etc.
           </ProjectCard>
           <ProjectCard
-            title="Mixab.ly / Bump.fm"
+            title="Bump.fm"
             link="/projectAbout"
             referenceLink="https://www.bump.fm"
             bg="linear-gradient(to right, #662D8C 0%, #ED1E79 100%)"
           >
-            I entered the DOCMA 2017 award with this Harry Potter inspired image.
+            Remote front end developer for a Spotify-playlist streaming web and mobile platform.(no longer operating)
           </ProjectCard>
           <ProjectCard
             title="GHO"
@@ -58,7 +68,7 @@ const ProjectAbout = () => (
             referenceLink="https://globalhealthobjectives.org"
             bg="linear-gradient(to right, #103d60 0%, #b2b7ff 100%)"
           >
-            Recreation of a Tomb Raider Wallpaper (Fan Art)
+            Web developer and Digital Adviser for a sub-branch of WHO, in Geneva.
           </ProjectCard>
           <ProjectCard
             title="Boardaboat"
@@ -66,42 +76,54 @@ const ProjectAbout = () => (
             referenceLink="https://boardaboat.com"
             bg="linear-gradient(to right, #103d60 0%, #00FFEE 100%)"
           >
-            A fantasy image manipulation relocating the habitat of wild animals.
+            Front end developer and Testing for an Airbnb-inspired boat trips platform, now based in London.
           </ProjectCard>
-          <ProjectCard
-            title="Advisor4Schools"
-            link="/projectAbout"
-            referenceLink="http://advisor.4schools.com"
-            bg="linear-gradient(to right, #9babb4 0%, #364349 100%)"
-          >
-            Lorem Ipsum lorem ipsum is the standard.
-          </ProjectCard>
-          <ProjectCard
-            title="MIBS site"
-            link="/projectAbout"
-            referenceLink="http://mcgill.com"
-            bg="linear-gradient(to right, #D585FF 0%, #00FFEE 100%)"
-          >
-            Lorem Ipsum lorem ipsum is the standard.
-          </ProjectCard>
+          {/* <ProjectCard */}
+          {/* title="Advisor4Schools" */}
+          {/* link="/projectAbout" */}
+          {/* referenceLink="http://advisor.4schools.com" */}
+          {/* bg="linear-gradient(to right, #9babb4 0%, #364349 100%)" */}
+          {/* > */}
+          {/* Lorem Ipsum lorem ipsum is the standard. */}
+          {/* </ProjectCard> */}
+          {/* <ProjectCard */}
+          {/* title="MIBS site" */}
+          {/* link="/projectAbout" */}
+          {/* referenceLink="http://mcgill.com" */}
+          {/* bg="linear-gradient(to right, #D585FF 0%, #00FFEE 100%)" */}
+          {/* > */}
+          {/* Lorem Ipsum lorem ipsum is the standard. */}
+          {/* </ProjectCard> */}
           <ProjectCard
             title="Oda"
             link="/projectAbout"
             referenceLink="`https://odahotel.al`"
             bg="linear-gradient(to right, #684f1d 0%, #1f9d55 100%)"
           >
-            Lorem Ipsum lorem ipsum is the standard.
+            Small web project for a local hotel based in Tirana, Albania.
           </ProjectCard>
           <ProjectCard
             title="My Portfolio"
             link="/projectAbout"
-            referenceLink="https://geni94.github.com"
+            referenceLink="https://geni94.github.io"
             bg="linear-gradient(to right, #72173a 0%, #e9af32 100%)"
           >
-            This portfolio website.
+            This portfolio website, built with Gatsby.
           </ProjectCard>
         </ProjectsWrapper>
       </Projects>
+      <Contact offset={2}>
+        <Inner>
+          <Title>Get in touch</Title>
+          <ContactText>
+            <a href="mailto:eugen.yzeiri@gmail.com">Say hi</a> or find me <a href="https://github.com/geni94">GitHub</a>{' '}
+            &amp; <a href="https://www.linkedin.com/in/eugen-yzeiri-8aa10288/">LinkedIn</a>
+          </ContactText>
+        </Inner>
+        <Footer>
+          &copy; 2019, crafted by <a href="https://github.com/geni94">Eugen Yzeiri</a>
+        </Footer>
+      </Contact>
     </Parallax>
   </>
 )

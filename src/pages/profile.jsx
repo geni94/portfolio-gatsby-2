@@ -9,6 +9,8 @@ import About from '../views/About'
 
 import avatar from '../images/avatar.jpg'
 import { Title } from '../elements/Titles'
+import Inner from '../elements/Inner'
+import Contact from '../views/Contact'
 
 const AboutHero = styled.div`
   ${tw`flex flex-col lg:flex-row items-center mt-8`};
@@ -24,6 +26,13 @@ const AboutSub = styled.span`
 
 const AboutDesc = styled.p`
   ${tw`text-grey-light text-lg md:text-xl lg:text-2xl font-mono pt-6 md:pt-12 text-justify`};
+`
+
+const Footer = styled.footer`
+  ${tw`text-center text-grey absolute pin-b p-6 font-mono text-md lg:text-lg`};
+`
+const ContactText = styled.p`
+  ${tw`text-grey-light font-mono text-xl md:text-2xl lg:text-3xl`};
 `
 
 const Profile = () => (
@@ -53,6 +62,18 @@ const Profile = () => (
           levels of code and assist in software engineering. Fluent in English and French (and some Italian).
         </AboutDesc>
       </About>
+      <Contact offset={1}>
+        <Inner>
+          <Title>Get in touch</Title>
+          <ContactText>
+            <a href="mailto:eugen.yzeiri@gmail.com">Say hi</a> or find me <a href="https://github.com/geni94">GitHub</a>{' '}
+            &amp; <a href="https://www.linkedin.com/in/eugen-yzeiri-8aa10288/">LinkedIn</a>
+          </ContactText>
+        </Inner>
+        <Footer>
+          &copy; 2019, crafted by <a href="https://github.com/geni94">Eugen Yzeiri</a>
+        </Footer>
+      </Contact>
     </Parallax>
   </>
 )
