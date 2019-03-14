@@ -49,14 +49,12 @@ const ProjectAbout = () => (
           <ProjectCard
             title="Ritech Solutions"
             referenceLink="https://www.ritech.co"
-            link="/projectAbout"
             bg="linear-gradient(to right, #f2d024 0%, #70818a 100%)"
           >
             [Currently] working as web developer. Dealing with AWS, Vue, Jenkins, etc.
           </ProjectCard>
           <ProjectCard
             title="Bump.fm"
-            link="/projectAbout"
             referenceLink="https://www.bump.fm"
             bg="linear-gradient(to right, #662D8C 0%, #ED1E79 100%)"
           >
@@ -64,7 +62,6 @@ const ProjectAbout = () => (
           </ProjectCard>
           <ProjectCard
             title="GHO"
-            link="/projectAbout"
             referenceLink="https://globalhealthobjectives.org"
             bg="linear-gradient(to right, #103d60 0%, #b2b7ff 100%)"
           >
@@ -72,7 +69,6 @@ const ProjectAbout = () => (
           </ProjectCard>
           <ProjectCard
             title="Boardaboat"
-            link="/projectAbout"
             referenceLink="https://boardaboat.com"
             bg="linear-gradient(to right, #103d60 0%, #00FFEE 100%)"
           >
@@ -96,7 +92,6 @@ const ProjectAbout = () => (
           {/* </ProjectCard> */}
           <ProjectCard
             title="Oda"
-            link="/projectAbout"
             referenceLink="`https://odahotel.al`"
             bg="linear-gradient(to right, #684f1d 0%, #1f9d55 100%)"
           >
@@ -104,7 +99,7 @@ const ProjectAbout = () => (
           </ProjectCard>
           <ProjectCard
             title="My Portfolio"
-            link="/projectAbout"
+            link="/"
             referenceLink="https://geni94.github.io"
             bg="linear-gradient(to right, #72173a 0%, #e9af32 100%)"
           >

@@ -26,6 +26,9 @@ const AboutSub = styled.span`
 
 const AboutDesc = styled.p`
   ${tw`text-grey-light text-lg md:text-xl lg:text-2xl font-mono pt-6 md:pt-12 text-justify`};
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+  padding: 1em;
+  border: 2px solid lightgrey;
 `
 
 const Footer = styled.footer`
@@ -38,8 +41,8 @@ const ContactText = styled.p`
 const Profile = () => (
   <>
     <Layout />
-    <Parallax pages={2}>
-      <About offset={0.3}>
+    <Parallax pages={3}>
+      <About offset={0.5}>
         <div className="link-menu profile">
           <Link to="/">Home</Link>
           <Link to="/projectAbout">Projects</Link>
@@ -52,17 +55,35 @@ const Profile = () => (
           </AboutSub>
         </AboutHero>
         <AboutDesc>
-          I enjoy mixing creativity and simplicity. My work tends to be detail-oriented, test-friendly and have a
-          problem-solving attitude. Having lived in both developed and developing countries in the continent, I believe
-          I understand very well the European market. With a diversified portfolio, I've had professional experiences on
-          frontend/full-stack/software development, and have been keen on trying new data-driven technologies. <br />{' '}
-          Studied Computer & Information Sciences at University of Geneva. Having worked continuously with various
-          Scrum/Agile teams, my skills have been proven in different, flexible working environments. I tend to follow
-          object-oriented principles and like test-driven, mobile-first environments. <br /> Able to think in higher
-          levels of code and assist in software engineering. Fluent in English and French (and some Italian).
+          For the past 3 years, I've been actively developing web apps and software in different domains and for various
+          clients. I've worked extensively with Agile and Scrum teams, but also freelanced work to various, local
+          clients. Currently, I'm engaged as a full-time web developer at 'Ritech Solutions', at its offices in Tirana,
+          Albania. <br /> <br />
+          My specialties mostly include JavaScript and Python-based environments. Most of my experiences have been on
+          client-side apps, however I've worked with highly-specialized back-end teams very often, and have developed
+          APIs and cloud-based data structures before, as a full-stack developer. <br /> <br /> My preferred tech stack
+          is JavaScript/Node.js-based [preferably coupled with Amazon Web Services (which I use in my everyday work), a
+          a Vue or React powered interface (I prefer to decide that case-by-case)]. Besides the affirmed above JS
+          libraries, I've experimented with new SSR-based libraries, such as Gatsby (where I'm also a
+          maintainer/contributor), Next.js and new design patterns such as functional programming or Serverless. The
+          last one has made me love cloud services even more, especially AWS Lambda (or Lambda-like) services. <br />{' '}
+          <br /> Apart from engineering modern, detailed but simple, blazing-fast apps, I love to mingle with data as
+          well. I have a good understanding of Machine Learning in practice, and applied types of Neural Networks -
+          using Python's "numpy, scipy and pandas". However, with the every day updates that happen in the Data Science
+          domain, I've been happily focused on TensorFlow and its ease of applications. <br /> <br />
+          <br /> <br /> Studied Computer & Information Sciences at University of Geneva. Able to think in higher levels
+          of code and assist in software engineering and team leading. <br /> <br /> I speak fluent in English and
+          French (and some Italian).
         </AboutDesc>
       </About>
-      <Contact offset={1}>
+      <About offset={1.3}>
+        <AboutHero>
+          <AboutSub>
+            • I love Slack <br /> • I believe in Quantum Mechanics <br /> • I play the piano and Skyrim
+          </AboutSub>
+        </AboutHero>
+      </About>
+      <Contact offset={2}>
         <Inner>
           <Title>Get in touch</Title>
           <ContactText>

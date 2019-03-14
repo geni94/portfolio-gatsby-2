@@ -44,9 +44,13 @@ const ProjectCard = ({ title, link, referenceLink, children, bg }) => (
 
 export default ProjectCard
 
+ProjectCard.defaultProps = {
+  link: ``,
+}
+
 ProjectCard.propTypes = {
   title: PropTypes.string.isRequired,
-  link: PropTypes.string.isRequired,
+  link: PropTypes.string,
   referenceLink: PropTypes.string.isRequired,
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,
   bg: PropTypes.string.isRequired,
