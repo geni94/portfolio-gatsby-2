@@ -8,12 +8,16 @@ import Layout from '../components/Layout'
 import About from '../views/About'
 
 import avatar from '../images/avatar.jpg'
-import { Title } from '../elements/Titles'
+import { BigTitle, Title } from '../elements/Titles'
 import Inner from '../elements/Inner'
 import Contact from '../views/Contact'
 
 const AboutHero = styled.div`
   ${tw`flex flex-col lg:flex-row items-center mt-8`};
+`
+
+const MenuDiv = styled.div`
+  ${tw`flex flex-col lg:flex-row items-center mt-8`}
 `
 
 const Avatar = styled.img`
@@ -41,13 +45,15 @@ const ContactText = styled.p`
 const Profile = () => (
   <>
     <Layout />
-    <Parallax pages={3}>
-      <About offset={0.5}>
+    <Parallax pages={4}>
+      <MenuDiv offset={0}>
         <div className="link-menu profile">
           <Link to="/">Home</Link>
           <Link to="/projectAbout">Projects</Link>
         </div>
-        <Title>About Me</Title>
+        <BigTitle>About Me</BigTitle>
+      </MenuDiv>
+      <About className="about--wrapper" offset={0.7}>
         <AboutHero>
           <Avatar src={avatar} alt="John Doe" />
           <AboutSub>
@@ -76,14 +82,14 @@ const Profile = () => (
           French (and some Italian).
         </AboutDesc>
       </About>
-      <About offset={1.3}>
+      <About offset={2}>
         <AboutHero>
           <AboutSub>
             • I love Slack <br /> • I believe in Quantum Mechanics <br /> • I play the piano and Skyrim
           </AboutSub>
         </AboutHero>
       </About>
-      <Contact offset={2}>
+      <Contact offset={2.7}>
         <Inner>
           <Title>Get in touch</Title>
           <ContactText>
