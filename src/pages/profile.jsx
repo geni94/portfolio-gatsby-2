@@ -35,6 +35,10 @@ const AboutDesc = styled.p`
   border: 2px solid lightgrey;
 `
 
+const IconContainer = styled.div`
+  ${tw`text-white font-mono pt-12 lg:pt-0 lg:pl-12 text-2xl lg:text-3xl xl:text-4xl`};
+`
+
 const Footer = styled.footer`
   ${tw`text-center text-grey absolute pin-b p-6 font-mono text-md lg:text-lg`};
 `
@@ -67,22 +71,35 @@ const Profile = () => (
           Albania. <br /> <br />
           My specialties mostly include JavaScript and Python-based environments. Most of my experiences have been on
           client-side apps, however I've worked with highly-specialized back-end teams very often, and have developed
-          APIs and cloud-based data structures before, as a full-stack developer. <br /> <br /> My preferred tech stack
-          is JavaScript/Node.js-based [preferably coupled with Amazon Web Services (which I use in my everyday work), a
-          a Vue or React powered interface (I prefer to decide that case-by-case)]. Besides the affirmed above JS
-          libraries, I've experimented with new SSR-based libraries, such as Gatsby (where I'm also a
-          maintainer/contributor), Next.js and new design patterns such as functional programming or Serverless. The
-          last one has made me love cloud services even more, especially AWS Lambda (or Lambda-like) services. <br />{' '}
-          <br /> Apart from engineering modern, detailed but simple, blazing-fast apps, I love to mingle with data as
-          well. I have a good understanding of Machine Learning in practice, and applied types of Neural Networks -
-          using Python's "numpy, scipy and pandas". However, with the every day updates that happen in the Data Science
-          domain, I've been happily focused on TensorFlow and its ease of applications. <br /> <br />
+          APIs and cloud-based data structures before, as a full-stack developer. <br /> <br /> <br /> Apart from
+          engineering modern, detailed but simple, blazing-fast apps, I love to mingle with data as well. I have a good
+          understanding of Machine Learning in practice, and applied types of Neural Networks - using Python's "numpy,
+          scipy and pandas". However, with the every day updates that happen in the Data Science domain, I've been
+          happily focused on TensorFlow and its ease of applications. <br /> <br />
           <br /> <br /> Studied Computer & Information Sciences at University of Geneva. Able to think in higher levels
           of code and assist in software engineering and team leading. <br /> <br /> I speak fluent in English and
           French (and some Italian).
         </AboutDesc>
       </About>
       <About offset={2}>
+        <IconContainer className="icon--container">
+          <div>
+            <i className="devicon-nodejs-plain-wordmark" />
+            <i className="devicon-python-plain-wordmark" />
+            {/* <i className="devicon-linux-plain" /> */}
+          </div>
+
+          <div>
+            <i className="devicon-vuejs-plain-wordmark" />
+            <i className="devicon-react-original-wordmark" />
+          </div>
+
+          <div>
+            <i className="devicon-amazonwebservices-plain-wordmark" />
+            <i className="devicon-webpack-plain-wordmark" />
+            <i className="devicon-git-plain-wordmark" />
+          </div>
+        </IconContainer>
         <AboutHero>
           <AboutSub>
             • I love Slack <br /> • I believe in Quantum Mechanics <br /> • I play the piano and Skyrim
