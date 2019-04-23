@@ -7,17 +7,18 @@ module.exports = {
   siteTitleAlt: 'Eugen Yzeiri', // Alternative Site title for SEO
   siteTitleShort: 'Eugen', // short_name for manifest
   siteHeadline: 'Web and software developer', // Headline for schema.org JSONLD
-  siteUrl: 'https://geni94.github.io', // Domain of your site. No trailing slash!
+  siteUrl: 'http://eugenyzeiri.xyz', // Domain of your site. No trailing slash!
   siteLanguage: 'en', // Language Tag on <html> element
   siteLogo: '/logo.png', // Used for SEO and manifest
-  siteDescription: 'Playful & Colorful website for displaying a portfolio',
+  siteDescription:
+    'A web developer, tech enthusiast and avid learner, and this is a playful & Colorful website for displaying my portfolio.',
   author: 'geni94',
 
   // siteFBAppID: '123456789', // Facebook App ID - Optional
   // userTwitter: '@cara', // Twitter Username
   // ogSiteName: 'cara', // Facebook Site Name
   // ogLanguage: 'en_US', // Facebook Language
-  googleAnalyticsID: 'UA-47519312-5',
+  googleAnalyticsID: 'UA-83799534-1',
 
   // Manifest and Progress color
   themeColor: tailwind.colors.orange,
