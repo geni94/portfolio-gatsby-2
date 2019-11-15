@@ -14,10 +14,6 @@ module.exports = {
     'A web developer, tech enthusiast and avid learner, and this is a playful & Colorful website for displaying my portfolio.',
   author: 'geni94',
 
-  // siteFBAppID: '123456789', // Facebook App ID - Optional
-  // userTwitter: '@cara', // Twitter Username
-  // ogSiteName: 'cara', // Facebook Site Name
-  // ogLanguage: 'en_US', // Facebook Language
   googleAnalyticsID: 'UA-83799534-1',
 
   // Manifest and Progress color

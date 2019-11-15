@@ -18,6 +18,7 @@ const AboutHero = styled.div`
 
 const MenuDiv = styled.div`
   ${tw`flex flex-col lg:flex-row items-center mt-8`}
+  flex-direction: column !important;
 `
 
 const Avatar = styled.img`
@@ -56,57 +57,113 @@ const Profile = () => (
           <Link to="/projectAbout">Projects</Link>
         </div>
         <BigTitle>About Me</BigTitle>
-      </MenuDiv>
-      <About className="about--wrapper" offset={0.7}>
         <AboutHero>
-          <Avatar src={avatar} alt="John Doe" />
+          <Avatar src={avatar} alt="Eugen Yzeiri" />
           <AboutSub>
-            • 24 years old <br /> • web and software developer <br /> • based in Tirana, Albania
+            • web and software developer <br /> • Contributing since 2016 <br /> • based in Tirana, Albania <br /> • CS
+            at the University of Geneva
           </AboutSub>
         </AboutHero>
-        <AboutDesc>
-          For the past 3 years, I've been actively developing web apps and software in different domains and for various
-          clients. I've worked extensively with Agile and Scrum teams, but also freelanced work to various, local
-          clients. Currently, I'm engaged as a full-time web developer at 'Ritech Solutions', at its offices in Tirana,
-          Albania. <br /> <br />
-          My specialties mostly include JavaScript and Python-based environments. Most of my experiences have been on
-          client-side apps, however I've worked with highly-specialized back-end teams very often, and have developed
-          APIs and cloud-based data structures before, as a full-stack developer. <br /> <br /> <br /> Apart from
-          engineering modern, detailed but simple, blazing-fast apps, I love to mingle with data as well. I have a good
-          understanding of Machine Learning in practice, and applied types of Neural Networks - using Python's "numpy,
-          scipy and pandas". However, with the every day updates that happen in the Data Science domain, I've been
-          happily focused on TensorFlow and its ease of applications. <br /> <br />
-          <br /> <br /> Studied Computer & Information Sciences at University of Geneva. Able to think in higher levels
-          of code and assist in software engineering and team leading. <br /> <br /> I speak fluent in English and
-          French (and some Italian).
-        </AboutDesc>
-      </About>
-      <About offset={2}>
+      </MenuDiv>
+      {/* <About className="about--wrapper" offset={1}> */}
+      {/*  <div className="center"> */}
+      {/*    <div className="card"> */}
+      {/*      <div className="additional"> */}
+      {/*        <div className="user-card"> */}
+      {/*          <div className="level center">Level 13</div> */}
+      {/*          <div className="points center">5,312 Points</div> */}
+      {/*          <Avatar src={avatar} alt="Eugen Yzeiri" /> */}
+      {/*        </div> */}
+      {/*        <div className="more-info"> */}
+      {/*          <h1>Jane Doe</h1> */}
+      {/*          <div className="coords"> */}
+      {/*            <span>Group Name</span> */}
+      {/*            <span>Joined January 2019</span> */}
+      {/*          </div> */}
+      {/*          <div className="coords"> */}
+      {/*            <span>Position/Role</span> */}
+      {/*            <span>City, Country</span> */}
+      {/*          </div> */}
+      {/*          <div className="stats"> */}
+      {/*            <div> */}
+      {/*              <div className="title">Awards</div> */}
+      {/*              <i className="fa fa-trophy" /> */}
+      {/*              <div className="value">2</div> */}
+      {/*            </div> */}
+      {/*            <div> */}
+      {/*              <div className="title">Matches</div> */}
+      {/*              <i className="fa fa-gamepad" /> */}
+      {/*              <div className="value">27</div> */}
+      {/*            </div> */}
+      {/*            <div> */}
+      {/*              <div className="title">Pals</div> */}
+      {/*              <i className="fa fa-group" /> */}
+      {/*              <div className="value">123</div> */}
+      {/*            </div> */}
+      {/*            <div> */}
+      {/*              <div className="title">Coffee</div> */}
+      {/*              <i className="fa fa-coffee" /> */}
+      {/*              <div className="value infinity">∞</div> */}
+      {/*            </div> */}
+      {/*          </div> */}
+      {/*        </div> */}
+      {/*      </div> */}
+      {/*      <div className="general"> */}
+      {/*        <h1>Jane Doe</h1> */}
+      {/*        <p> */}
+      {/*          A programmer proven in multiple Agile and Scrum environments, with in office and remote experiences in */}
+      {/*          high level functioning teams. Mostly uses JavaScript and Python, although he has experimented with */}
+      {/*          GoLang and Java in personal projects. Studied CS the University of Geneva. */}
+      {/*        </p> */}
+      {/*        <span className="more">Mouse over for more blabs</span> */}
+      {/*      </div> */}
+      {/*    </div> */}
+      {/*  </div> */}
+      {/* </About> */}
+      <About offset={1}>
         <IconContainer className="icon--container">
+          <h3>Technical Expertise</h3>
           <div>
-            <i className="devicon-nodejs-plain-wordmark" />
-            <i className="devicon-python-plain-wordmark" />
-            {/* <i className="devicon-linux-plain" /> */}
+            <i className="tooltip devicon-nodejs-plain-wordmark">
+              <span className="tooltiptext">Web Development</span>
+            </i>
+            <i className="tooltip devicon-python-plain-wordmark">
+              <span className="tooltiptext">Software, MVC apps, Automation</span>
+            </i>
+            <i className="tooltip devicon-go-plain">
+              <span className="tooltiptext">Web Development</span>
+            </i>
+            <i className="tooltip devicon-linux-plain">
+              <span className="tooltiptext">Software and Embedded Apps</span>
+            </i>
           </div>
 
           <div>
-            <i className="devicon-vuejs-plain-wordmark" />
-            <i className="devicon-react-original-wordmark" />
+            <i className="tooltip devicon-vuejs-plain-wordmark">
+              <span className="tooltiptext">Front end, PWA, SPA</span>
+            </i>
+            <i className="tooltip devicon-react-original-wordmark">
+              <span className="tooltiptext">Front end, PWA, SPA, Mobile</span>
+            </i>
           </div>
 
           <div>
-            <i className="devicon-amazonwebservices-plain-wordmark" />
-            <i className="devicon-webpack-plain-wordmark" />
-            <i className="devicon-git-plain-wordmark" />
+            <i className="tooltip devicon-amazonwebservices-plain-wordmark" rel="Delivery">
+              <span className="tooltiptext">Cloud Services (EC2, S3, Lambda)</span>
+            </i>
+            <i className="tooltip devicon-webpack-plain-wordmark">
+              <span className="tooltiptext">Optimized JavaScript builds</span>
+            </i>
+            <i className="tooltip devicon-nginx-original">
+              <span className="tooltiptext">Web Services</span>
+            </i>
+            <i className="tooltip devicon-git-plain-wordmark">
+              <span className="tooltiptext">Project Delivery with CI and CD pipelines</span>
+            </i>
           </div>
         </IconContainer>
-        <AboutHero>
-          <AboutSub>
-            • I love Slack <br /> • I believe in Quantum Mechanics <br /> • I play the piano and Skyrim
-          </AboutSub>
-        </AboutHero>
       </About>
-      <Contact offset={2.7}>
+      <Contact offset={2}>
         <Inner>
           <Title>Get in touch</Title>
           <ContactText>
@@ -115,7 +172,7 @@ const Profile = () => (
           </ContactText>
         </Inner>
         <Footer>
-          &copy; 2019, crafted by <a href="https://github.com/geni94">Eugen Yzeiri</a>
+          <a href="https://github.com/geni94">&copy; 2019</a>
         </Footer>
       </Contact>
     </Parallax>

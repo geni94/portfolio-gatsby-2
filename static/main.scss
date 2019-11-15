@@ -33,10 +33,6 @@ a {
   }
 }
 
-.about--wrapper {
-  margin-top: 5em;
-}
-
 .link-menu {
   a {
     font-size: 24px;
@@ -63,13 +59,441 @@ a {
 }
 
 .icon--container {
+  z-index: 99999;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);  border-radius: 5px;
+  image-rendering: pixelated;
+  //background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);  border-radius: 5px;
+  //background-image: url("https://images.unsplash.com/photo-1515446808777-87f69cb475aa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80");
+  //background-image: url("https://images.unsplash.com/photo-1543147495-b6984a841135?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1022&q=80");
+  //background-image: url("https://images.unsplash.com/photo-1543253740-c3047484b0d0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80");
+  background-size: cover;
+  background: transparent;
   i {
     font-size: 120px;
   }
+  img {image-rendering: pixelated;}
   div { margin: 1em 0;width: 100%;display: flex;justify-content: space-around; }
+}
+.tooltip {
+  display: inline-block;
+  position: relative;
+}
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 6px;
+  border-radius: 6px;
+  min-width: 120px;
+  width: auto;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
+  font-size: 24px;
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
+  .icon--container {
+    flex-direction: row;
+    margin: 0;
+    div {
+      flex-direction: column;
+    }
+  }
+  .container {
+    flex-direction: column;
+  }
+}
+
+$bg-color: #E6E5E1;
+$shdow-gray: #d3d3d5;
+$orange: #DA4D1D;
+$blue: #2b26c3;
+$img-url: "https://media.giphy.com/media/10SvWCbt1ytWCc/giphy.gif";
+$img-url2: "https://media.giphy.com/media/4WSTSdQZXwME0/giphy.gif";
+
+h2 {
+  pointer-events:none;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  //flex-direction: column;
+
+  i {
+    opacity: 0;
+    font-size: 18px;
+    color: #fff;
+    will-change: transform;
+    -webkit-transform: scale(0.1);
+    transform: scale(0.1);
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+  }
+  .card {
+    position: relative;
+    width: 500px;
+    height: 200px;
+    background-color: #fff;
+    overflow: hidden;
+    margin-bottom: 4px;
+
+    &:before {
+      content: "";
+      z-index: 99;
+      position: absolute;
+      top: -10px;
+      left: 32px;
+      display: block;
+      width: 16px;
+      height: 16px;
+      border-radius: 16px;
+      background-color: $bg-color;
+    }
+    &:after {
+      content: "";
+      z-index: 99;
+      position: absolute;
+      bottom: -10px;
+      left: 32px;
+      display: block;
+      width: 16px;
+      height: 16px;
+      border-radius: 16px;
+      background-color: $bg-color;
+    }
+    ul {
+      z-index: 99;
+      position: absolute;
+      left: 39px;
+      top: 5px;
+      list-style-type: none;
+      li {
+        width: 2px;
+        height: 2px;
+        border-radius: 2px;
+        margin: 6px 0;
+        background-color: $bg-color;
+      }
+    }
+    h2 {
+      z-index: 99;
+      font-family: "Poppins", sans-serif;
+      position: absolute;
+      bottom: 0;
+      right: 130px;
+      font-size: 60px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .fa-arrow-right {
+      z-index: 100;
+      position: absolute;
+      right: 75px;
+      bottom: 25px;
+      font-size: 40px;
+      cursor: pointer;
+    }
+    p {
+      z-index: 99;
+      position: absolute;
+      top: 20px;
+      right: 70px;
+      color: #333;
+      opacity: 0.7;
+      font-size: 12px;
+      letter-spacing: 1px;
+      writing-mode: vertical-lr;
+      -webkit-transition: all 0.2s ease;
+      transition: all 0.2s ease;
+    }
+    .pic {
+      z-index: 100;
+      width: 400px;
+      height: 200px;
+      background-image: url($img-url);
+      background-size: 100% 100%;
+      filter: grayscale(100%);
+    }
+
+    .social {
+      position: absolute;
+      left: 60px;
+      top: 0;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: justify;
+      justify-content: space-around;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      width: 180px;
+      height: 64px;
+      border-radius: 80px;
+    }
+
+    .social i:nth-of-type(1) {
+      -webkit-transition-delay: 0.4s;
+      transition-delay: 0.4s;
+    }
+
+    .social i:nth-of-type(2) {
+      -webkit-transition-delay: 0.3s;
+      transition-delay: 0.3s;
+    }
+
+    .social i:nth-of-type(3) {
+      -webkit-transition-delay: 0.2s;
+      transition-delay: 0.2s;
+    }
+
+    .social i:nth-of-type(4) {
+      -webkit-transition-delay: 0.1s;
+      transition-delay: 0.1s;
+    }
+
+    &:hover i {
+      opacity: 1;
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+
+    button {
+      position: absolute;
+      right: 14px;
+      bottom: 14px;
+      width: 30px;
+      height: 30px;
+      background-color: $orange;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      outline:none;
+      transition: all 0.3s ease;
+      mix-blend-mode: hard-light;
+
+      i {
+        font-size: 3rem;
+      }
+    }
+
+    &:hover button {
+      transform: scale(16.5);
+    }
+
+    &:hover p {
+      color: #fff;
+    }
+
+    &:hover .pic {
+      filter: grayscale(0);
+
+    }
+  }
+
+  .card2 {
+    .pic {
+      background-image: url($img-url2);
+    }
+    button {
+      background-color: $blue;
+    }
+  }
+}
+
+.dr {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  width:100px;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+}
+
+.card {
+  width: 450px;
+  height: 250px;
+  background-color: #fff;
+  background: linear-gradient(#f8f8f8, #fff);
+  box-shadow: 0 8px 16px -8px rgba(0,0,0,0.4);
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+  margin: 1.5rem;
+}
+
+.card h1 {
+  text-align: center;
+}
+
+.card .additional {
+  position: absolute;
+  width: 150px;
+  height: 100%;
+  background: linear-gradient(#dE685E, #EE786E);
+  transition: width 0.4s;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.card.green .additional {
+  background: linear-gradient(#92bCa6, #A2CCB6);
+}
+
+
+.card:hover .additional {
+  width: 100%;
+  border-radius: 0 5px 5px 0;
+}
+
+.card .additional .user-card {
+  width: 150px;
+  height: 100%;
+  position: relative;
+  float: left;
+}
+
+.card .additional .user-card::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 10%;
+  right: -2px;
+  height: 80%;
+  border-left: 2px solid rgba(0,0,0,0.025);
+}
+
+.card .additional .user-card .level,
+.card .additional .user-card .points {
+  top: 15%;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 0.75em;
+  font-weight: bold;
+  background: rgba(0,0,0,0.15);
+  padding: 0.125rem 0.75rem;
+  border-radius: 100px;
+  white-space: nowrap;
+}
+
+.card .additional .user-card .points {
+  top: 85%;
+}
+
+.card .additional .user-card svg {
+  top: 50%;
+}
+
+.card .additional .more-info {
+  width: 300px;
+  float: left;
+  position: absolute;
+  left: 150px;
+  height: 100%;
+}
+
+.card .additional .more-info h1 {
+  color: #fff;
+  margin-bottom: 0;
+}
+
+.card.green .additional .more-info h1 {
+  color: #224C36;
+}
+
+.card .additional .coords {
+  margin: 0 1rem;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.card.green .additional .coords {
+  color: #325C46;
+}
+
+.card .additional .coords span + span {
+  float: right;
+}
+
+.card .additional .stats {
+  font-size: 2rem;
+  display: flex;
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  right: 1rem;
+  top: auto;
+  color: #fff;
+}
+
+.card.green .additional .stats {
+  color: #325C46;
+}
+
+.card .additional .stats > div {
+  flex: 1;
+  text-align: center;
+}
+
+.card .additional .stats i {
+  display: block;
+}
+
+.card .additional .stats div.title {
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.card .additional .stats div.value {
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1.5rem;
+}
+
+.card .additional .stats div.value.infinity {
+  font-size: 2.5rem;
+}
+
+.card .general {
+  width: 300px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  box-sizing: border-box;
+  padding: 1rem;
+  padding-top: 0;
+}
+
+.card .general .more {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  font-size: 0.9em;
 }

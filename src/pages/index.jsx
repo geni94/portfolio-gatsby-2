@@ -47,10 +47,80 @@ const Index = () => (
             a web and software developer.
           </Typist>
         </Subtitle>
-        <div className="link-menu">
-          <Link to="/projectAbout">Projects</Link>
-          <Link to="/profile">Profile</Link>
+        <div className="container">
+          <Link to="/projectAbout">
+            <div className="card">
+              <h2>Projects</h2>
+              <i className="fas fa-arrow-right" />
+              <p>My Contributions</p>
+              <div className="pic" />
+              <ul>
+                <li />
+                <li />
+                <li />
+                <li />
+                <li />
+                <li />
+                <li />
+                <li />
+                <li />
+                <li />
+                <li />
+                <li />
+                <li />
+                <li />
+                <li />
+                <li />
+                <li />
+                <li />
+                <li />
+                <li />
+                <li />
+                <li />
+                <li />
+              </ul>
+              <button type="button" />
+            </div>
+          </Link>
+          <Link to="/profile">
+            <div className="card card2">
+              <h2>Profile</h2>
+              <i className="fas fa-arrow-right" />
+              <p>Get to know me</p>
+              <div className="pic" />
+              <ul>
+                <li />
+                <li />
+                <li />
+                <li />
+                <li />
+                <li />
+                <li />
+                <li />
+                <li />
+                <li />
+                <li />
+                <li />
+                <li />
+                <li />
+                <li />
+                <li />
+                <li />
+                <li />
+                <li />
+                <li />
+                <li />
+                <li />
+                <li />
+              </ul>
+              <button type="button" />
+            </div>
+          </Link>
         </div>
+        {/* <div className="link-menu"> */}
+        {/*  <Link to="/projectAbout">Projects</Link> */}
+        {/*  <Link to="/profile">Profile</Link> */}
+        {/* </div> */}
       </Hero>
     </Parallax>
   </>
