@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import tw from 'tailwind.macro'
@@ -18,9 +18,18 @@ const Text = styled.div`
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 `
 
-const Title = styled.a`
-  ${tw`text-white uppercase text-2xl md:text-3xl xl:text-4xl tracking-wide font-mono pt-8`};
+const Title = styled.button`
+  ${tw`text-white uppercase text-2xl md:text-3xl xl:text-4xl tracking-wide font-mono btn-link`};
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  padding: 0;
+  color: white;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  &:focus {
+    outline: none;
+    border: none;
+  }
 `
 
 const Reference = styled.a`
@@ -30,28 +39,37 @@ const Reference = styled.a`
   bottom: 1em;
 `
 
-const ProjectCard = ({ title, link, referenceLink, children, bg }) => (
-  <Wrapper bg={bg}>
-    <Text>{children}</Text>
-    <Title href={link}>{title}</Title>
-    <div>
-      <Reference href={referenceLink} target="_blank" rel="noopener noreferrer">
-        Site
-      </Reference>
-    </div>
-  </Wrapper>
-)
+const Paragraph = styled.p`
+  ${tw`text-white font-mono`};
+`
+
+const ProjectCard = ({ title, referenceLink, children, bg, content }) => {
+  const [contentSwitch, setContentSwitch] = useState(false)
+  const handleSwitch = () => {
+    setContentSwitch(!contentSwitch)
+  }
+  return (
+    <Wrapper bg={bg}>
+      <Text>{children}</Text>
+      <Title onClick={handleSwitch} className="btn-link">
+        {title}
+      </Title>
+      <div>
+        <Reference href={referenceLink} target="_blank" rel="noopener noreferrer">
+          Site
+        </Reference>
+      </div>
+      <Paragraph className={contentSwitch ? 'd-block' : 'd-none'}>{content}</Paragraph>
+    </Wrapper>
+  )
+}
 
 export default ProjectCard
 
-ProjectCard.defaultProps = {
-  link: ``,
-}
-
 ProjectCard.propTypes = {
   title: PropTypes.string.isRequired,
-  link: PropTypes.string,
   referenceLink: PropTypes.string.isRequired,
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,
   bg: PropTypes.string.isRequired,
+  content: PropTypes.string.isRequired,
 }

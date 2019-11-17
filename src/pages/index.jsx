@@ -33,7 +33,7 @@ const Index = () => (
       <Hero offset={0}>
         <BigTitle>
           <Typist stdTypingDelay={15} className="typist-class" avgTypingDelay={25} cursor={simpleCursor}>
-            Hello World <br /> I'm Eugen,
+            Hello World! <br /> I'm Eugen,
           </Typist>
         </BigTitle>
         <Subtitle>

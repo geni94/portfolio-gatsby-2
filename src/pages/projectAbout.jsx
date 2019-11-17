@@ -37,83 +37,94 @@ const Footer = styled.footer`
 `
 
 const ProjectAbout = ({ data }) => {
-  console.log('query data: ', data)
-  const { content } = data.markdownRemark.frontmatter
-  console.log('content for ritech: ', content)
+  const content = data.allMarkdownRemark.nodes
+  const contentArray = []
+  const handleContent = title => {
+    const x = contentArray.filter(c => c.title.toLowerCase().includes(title.toLowerCase()))
+    return x[0].content
+  }
+  if (content.length > 0) {
+    content.forEach(cn => {
+      const payload = {
+        id: cn.frontmatter.id,
+        title: cn.frontmatter.title,
+        content: cn.frontmatter.content,
+      }
+      contentArray.push(payload)
+    })
+  }
+
   return (
     <>
       <Layout />
       <Parallax pages={3}>
         <Projects offset={0}>
-          {/* {blogPostTemplate.map((project, index) => (
-            <li key={project.id}>Project {index}</li>
-          ))} */}
           <div className="link-menu about">
             <Link to="/">Home</Link>
             <Link to="/profile">Profile</Link>
           </div>
-          <Title>Projects & Contributions</Title>
+          <Title>Projects &amp; Contributions</Title>
           <ProjectsWrapper>
             <ProjectCard
               title="Ritech Solutions"
-              link="/projectAbout/ritech"
               referenceLink="https://www.ritech.co"
+              content={handleContent('ritech')}
               bg="linear-gradient(to right, #f2d024 0%, #70818a 100%)"
             >
               Working as web developer in B2B projects. Dealing with AWS, Vue, React, Jenkins, etc.
             </ProjectCard>
             <ProjectCard
               title="StoreWise"
-              link="/projectAbout/storewise"
               referenceLink="https://storewise.tech"
+              content={handleContent('storewise')}
               bg="linear-gradient(to right, #23282B 0%, #28AAE1 100%)"
             >
               Working as a front end lead in multiple React, golang and AWS Lambda repositories.
             </ProjectCard>
             <ProjectCard
               title="Bump.fm"
-              link="/projectAbout/bump"
               referenceLink="https://www.bump.fm"
+              content={handleContent('bump')}
               bg="linear-gradient(to right, #662D8C 0%, #ED1E79 100%)"
             >
               Remote front end developer for a Spotify-playlist streaming web and mobile platform.
             </ProjectCard>
             <ProjectCard
               title="GHO"
-              link="/projectAbout/gho"
               referenceLink="https://globalhealthobjectives.org"
+              content={handleContent('Global Health Objectives')}
               bg="linear-gradient(to right, #103d60 0%, #b2b7ff 100%)"
             >
               Web developer and Digital Adviser for a sub-branch of WHO, in Geneva.
             </ProjectCard>
             <ProjectCard
               title="Boardaboat"
-              link="/projectAbout/boardaboat"
               referenceLink="https://boardaboat.com"
+              content={handleContent('boardaboat')}
               bg="linear-gradient(to right, #103d60 0%, #00FFEE 100%)"
             >
               Front end developer and Testing for a boat and trips booking platform, now based in London.
             </ProjectCard>
             <ProjectCard
               title="Oda"
-              link="/projectAbout/oda"
               referenceLink="http://odahotel.al"
+              content={handleContent('oda')}
               bg="linear-gradient(to right, #684f1d 0%, #1f9d55 100%)"
             >
               Small web project for a local hotel based in Tirana, Albania.
             </ProjectCard>
             <ProjectCard
               title="My Portfolio"
-              link="/"
               referenceLink="https://geni94.github.io"
+              content={handleContent('portfolio')}
               bg="linear-gradient(to right, #72173a 0%, #e9af32 100%)"
             >
               This portfolio website, built with Gatsby.
             </ProjectCard>
             <ProjectCard
               title="Advisor4Schools"
-              link="/projectAbout/a4s"
               referenceLink="http://advisor4schools.com"
+              content={handleContent('advisor4schools')}
               bg="linear-gradient(to right, #9babb4 0%, #364349 100%)"
             >
               Digital Adviser and Tester for a platform that helps you find tailored Swiss education alternatives.
@@ -140,11 +151,16 @@ const ProjectAbout = ({ data }) => {
 
 export const query = graphql`
   query MyQuery {
-    markdownRemark(frontmatter: { title: { eq: "Ritech" } }) {
-      frontmatter {
-        content
-        date
-        title
+    allMarkdownRemark {
+      nodes {
+        frontmatter {
+          id
+          title
+          path
+          date
+          endDate
+          content
+        }
       }
     }
   }
