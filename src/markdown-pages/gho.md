@@ -4,5 +4,5 @@ date: "01/05/2016"
 endDate: "01/06/2017"
 id: 3
 title: "Global Health Objectives [for WHO]"
-content: ""
+content: "As a sub-branch of the World Health Organization, GHO was focused on creating a professional and helping community around global health initiatives, mainly in Africa. As part of the organizing team for 2 yearly round tables, and also a lead in the online campaigns to gain traction, I've dealt with a marketing-oriented tech stack. As the sole core developer, I built the platform using Jekyll CMS and provided multiple admin panels and dashboards for the team members."
 ---

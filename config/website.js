@@ -9,7 +9,7 @@ module.exports = {
   siteHeadline: 'Web and software developer', // Headline for schema.org JSONLD
   siteUrl: 'http://eugenyzeiri.xyz', // Domain of your site. No trailing slash!
   siteLanguage: 'en', // Language Tag on <html> element
-  siteLogo: '/logo.png', // Used for SEO and manifest
+  // siteLogo: '/logo.png', // Used for SEO and manifest
   siteDescription:
     'A web developer, tech enthusiast and avid learner, and this is a playful & Colorful website for displaying my portfolio.',
   author: 'geni94',

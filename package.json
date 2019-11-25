@@ -1,6 +1,6 @@
 {
   "name": "geni-gatsby-playful-portfolio",
-  "description": "Playful & Colorful One-Page website with Parallax effect powered by react-spring, TailwindCSS.",
+  "description": "Personal portfolio page for Eugen Yzeiri, a software and web developer. Playful & Colorful One-Page website with Parallax effect powered by react-spring, TailwindCSS.",
   "version": "1.0.0",
   "author": "<eugen.yzeir@gmail.com>",
   "license": "MIT",
@@ -38,6 +38,7 @@
     "eugen yzeiri",
     "gatsby",
     "developer",
+    "software developer",
     "web developer"
   ],
   "scripts": {
@@ -68,5 +69,5 @@
   "bugs": {
     "url": "https://github.com/geni94/portfolio-gatsby-2/issues"
   },
-  "homepage": "http://eugenyzeiri.xyz"
+  "homepage": "https://eugenyzeiri.xyz"
 }
